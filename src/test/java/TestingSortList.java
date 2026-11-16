@@ -37,9 +37,9 @@ public class TestingSortList {
     sortedList.add(person2);
 
     testingSortList = sortList.sortList(personsData.getPersonsDataList());
-    assertEquals(sortedList.getFirst().getFirstName(), testingSortList.getFirst().getFirstName());
-    assertEquals(sortedList.getFirst().getLastName(), testingSortList.getFirst().getLastName());
-    assertEquals(sortedList.getLast().getFirstName(), testingSortList.get(2).getFirstName());
-    assertEquals(sortedList.getLast().getLastName(), testingSortList.get(2).getLastName());
+    assertEquals(sortedList.get(0).getFirstName(), testingSortList.get(0).getFirstName());
+    assertEquals(sortedList.get(0).getLastName(), testingSortList.get(0).getLastName());
+    assertEquals(sortedList.get(1).getFirstName(), testingSortList.get(2).getFirstName());
+    assertEquals(sortedList.get(1).getLastName(), testingSortList.get(2).getLastName());
   }
 }

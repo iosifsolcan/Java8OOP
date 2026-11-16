@@ -24,7 +24,7 @@ public class ReadFromFile {
     try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName))) {
       line = reader.readLine();
       while ((line = reader.readLine()) != null) {
-        if (!line.isBlank()) {
+        if (!line.trim().isEmpty()) {
           PersonsData personData = new PersonsData();
           lineByParts = line.split(",");
           personData.setFirstName(lineByParts[0]);

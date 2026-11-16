@@ -30,18 +30,14 @@ public class TestingReadFromFile {
     testPersonsDataList.add(lastPerson);
 
     personsDataList = reader.readFromFile(inputFile);
+    assertEquals(testPersonsDataList.get(0).getFirstName(), personsDataList.get(0).getFirstName());
+    assertEquals(testPersonsDataList.get(0).getLastName(), personsDataList.get(0).getLastName());
     assertEquals(
-        testPersonsDataList.getFirst().getFirstName(), personsDataList.getFirst().getFirstName());
+        testPersonsDataList.get(0).getDateOfBirth(), personsDataList.get(0).getDateOfBirth());
+
+    assertEquals(testPersonsDataList.get(1).getFirstName(), personsDataList.get(4).getFirstName());
+    assertEquals(testPersonsDataList.get(1).getLastName(), personsDataList.get(4).getLastName());
     assertEquals(
-        testPersonsDataList.getFirst().getLastName(), personsDataList.getFirst().getLastName());
-    assertEquals(
-        testPersonsDataList.getFirst().getDateOfBirth(),
-        personsDataList.getFirst().getDateOfBirth());
-    assertEquals(
-        testPersonsDataList.getLast().getFirstName(), personsDataList.getLast().getFirstName());
-    assertEquals(
-        testPersonsDataList.getLast().getLastName(), personsDataList.getLast().getLastName());
-    assertEquals(
-        testPersonsDataList.getLast().getDateOfBirth(), personsDataList.getLast().getDateOfBirth());
+        testPersonsDataList.get(1).getDateOfBirth(), personsDataList.get(4).getDateOfBirth());
   }
 }
